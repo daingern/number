@@ -65,10 +65,10 @@ class NumberThai
 
         $output = '';
 
-        if ($num{0} == '-') {
+        if ($num[0] == '-') {
             $output .= 'ลบ';
             $num = ltrim($num, '-');
-        } elseif ($num{0} == '+') {
+        } elseif ($num[0] == '+') {
             $output .= 'บวก';
             $num = ltrim($num, '+');
         }
@@ -138,10 +138,10 @@ class NumberThai
 
         $output = '';
 
-        if ($num{0} == '-') {
+        if ($num[0] == '-') {
             $output .= 'ลบ';
             $num = ltrim($num, '-');
-        } elseif ($num{0} == '+') {
+        } elseif ($num[0] == '+') {
             $output .= 'บวก';
             $num = ltrim($num, '+');
         }
@@ -155,7 +155,7 @@ class NumberThai
         if ($dec > 0) {
             // if there is decimal (.)
             $output .= 'จุด';
-            if ($dec{0} == '0') {
+            if ($dec[0] == '0') {
                 // first digit after dot is zero. read number directly
                 for ($i = 0; $i < strlen($dec); $i++) {
                     $output .= $this->convertDirectNum($dec{$i});
